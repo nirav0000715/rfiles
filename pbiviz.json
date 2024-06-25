@@ -1,0 +1,26 @@
+{
+    "visual": {
+      "name": "advancecard",
+      "displayName": "advance_card",
+      "guid": "advancecard7A5AE835F87343BBBE295539499BEE6B",
+      "visualClassName": "Visual",
+      "version": "1.0.0.1",
+      "description": "this is the advancecard ",
+      "supportUrl": "www.google.com",
+      "gitHubUrl": ""
+    },
+    "apiVersion": "5.3.0",
+    "author": {
+      "name": "Nirav Rana",
+      "email": "nirav000715@gmail.com"
+    },
+    "assets": {
+      "icon": "assets/icon.png"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": [],
+    "version": "1.0.0.0"
+  }

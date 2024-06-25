@@ -1,0 +1,294 @@
+{
+	"dataRoles": [
+		{
+			"displayName": "Data field",
+			"name": "mainMeasure",
+			"kind": "Measure",
+			"description": "Put main data label field here."
+		},
+		{
+			"displayName": "Tooltip fields",
+			"name": "tooltipMeasures",
+			"kind": "Measure",
+			"description": "All fields present here will be used to display as a tooltip on card when 'Show Tooltip' option is enabled."
+		},
+		{
+			"displayName": "Condition field",
+			"name": "conditionMeasure",
+			"kind": "Measure",
+			"description": "If you want to use conditional formatting by different field, put that here otherwise leave it empty.",
+			"requiredTypes": [
+				{
+					"numeric": true
+				},
+				{
+					"integer": true
+				}
+			]
+		},
+		{
+			"displayName": "Period counter",
+			"name": "prefixMeasure",
+			"kind": "Measure",
+			"description": "Put prefix field here. If you want constant text as a prefix then add it through prefix settings in format pane."
+		},
+		{
+			"displayName": "Change value",
+			"name": "postfixMeasure",
+			"kind": "Measure",
+			"description": "Put postfix field here. If you want constant text as a postfix then add it through postfix settings in format pane."
+		}
+	],
+	"dataViewMappings": [
+		{
+			"conditions": [
+				{
+					"mainMeasure": {
+						"min": 0,
+						"max": 1
+					},
+					"conditionMeasure": {
+						"min": 0,
+						"max": 1
+					}
+				}
+			],
+			"table": {
+				"rows": {
+					"select": [
+						{
+							"for": {
+								"in": "mainMeasure"
+							}
+						},
+						{
+							"for": {
+								"in": "tooltipMeasures"
+							}
+						},
+						{
+							"for": {
+								"in": "conditionMeasure"
+							}
+						},
+						{
+							"for": {
+								"in": "prefixMeasure"
+							}
+						},
+						{
+							"for": {
+								"in": "postfixMeasure"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"objects": {
+		"dataLabelSettings": {
+			"properties": {
+				"displayUnit": {
+					"type":
+					{
+						"formatting": {
+							"labelDisplayUnits": true
+						}
+					}
+				},
+				"fontSize": { 
+					"type": {
+						"formatting": {
+							"fontSize": true
+						}
+					}
+				},
+				"fontFamily": {
+					"type": {
+						"formatting": {
+							"fontFamily": true
+						}
+					}
+				},
+				"isBold": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isItalic": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isunderline": {
+					"type": {
+						"bool": true
+					}
+				},
+				"color": {
+					"type": {
+						"fill": {
+							"solid": {
+								"color": true
+							}
+						}
+					}
+				},
+				"lineAlignment": {
+					"type": {
+						"formatting": {
+							"alignment": true
+						}
+					}
+				},
+				"text": {
+					"type":
+					{
+						"text":true
+					}
+				}
+			}
+		},
+		"prefixSettings": {
+			"properties": {
+				"displayUnit": {
+					"type":
+					{
+						"formatting": {
+							"labelDisplayUnits": true
+						}
+					}
+				},
+				"fontSize": { 
+					"type": {
+						"formatting": {
+							"fontSize": true
+						}
+					}
+				},
+				"fontFamily": {
+					"type": {
+						"formatting": {
+							"fontFamily": true
+						}
+					}
+				},
+				"isBold": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isunderline": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isItalic": {
+					"type": {
+						"bool": true
+					}
+				},
+				"color": {
+					"type": {
+						"fill": {
+							"solid": {
+								"color": true
+							}
+						}
+					}
+				},
+				"lineAlignment": {
+					"type": {
+						"formatting": {
+							"alignment": true
+						}
+					}
+				}
+			}
+		},
+		"postfixSettings": {
+			"properties": {
+				"displayUnit": {
+					"type":
+					{
+						"formatting": {
+							"labelDisplayUnits": true
+						}
+					}
+				},
+				"fontSize": { 
+					"type": {
+						"formatting": {
+							"fontSize": true
+						}
+					}
+				},
+				"fontFamily": {
+					"type": {
+						"formatting": {
+							"fontFamily": true
+						}
+					}
+				},
+				"isBold": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isunderline": {
+					"type": {
+						"bool": true
+					}
+				},
+				"isItalic": {
+					"type": {
+						"bool": true
+					}
+				},
+				"color_negative": {
+					"type": {
+						"fill": {
+							"solid": {
+								"color": true
+							}
+						}
+					}
+				},
+				"color_neutral": {
+					"type": {
+						"fill": {
+							"solid": {
+								"color": true
+							}
+						}
+					}
+				},
+				"color_positive": {
+					"type": {
+						"fill": {
+							"solid": {
+								"color": true
+							}
+						}
+					}
+				},
+				"lineAlignment": {
+					"type": {
+						"formatting": {
+							"alignment": true
+						}
+					}
+				}
+			}
+		}
+	},
+	"tooltips": {
+        "supportedTypes": {
+            "default": true,
+            "canvas": true
+        }
+    },
+	"privileges": [],
+	"suppressDefaultTitle": true
+}
